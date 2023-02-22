@@ -6,8 +6,8 @@ class Routes {
     }
 
     object Contact {
-        const val INDEX = "phonebooks"
-        const val SHOW = "phonebooks/all"
+        const val INDEX = "phone-contact"
+        const val SHOW = "phone-contact/all"
 
         object Operation {
             const val CREATE = "/create"

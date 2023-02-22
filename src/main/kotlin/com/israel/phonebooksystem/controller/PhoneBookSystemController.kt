@@ -11,7 +11,7 @@ import java.util.*
 import javax.validation.Valid
 
 
-@Tag(name = "Phone Books Management")
+@Tag(name = "Phone Contact Management")
 @RestController
 class PhoneBookSystemController(private var contactService: ContactService) {
 
