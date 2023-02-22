@@ -10,7 +10,7 @@ spring:
       path: /h2_console
   datasource:
     driverClassName: org.h2.Driver
-    url: jdbc:h2:~/test2
+    url: jdbc:h2:~/test
     username: sa
     password: root
     platform: org.hibernate.dialect.H2Dialect
