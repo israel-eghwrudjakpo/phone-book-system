@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  phonebooksystem-application:
+    build: .
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      JDBC_DATASOURCE_URL: jdbc:h2:~/test
+      JDBC_DATASOURCE_USERNAME: sa
+      JDBC_DATASOURCE_PASSWORD: root
+    depends_on:
+      - mysqldb
+    networks:
+      - phonebooksystem-net
+
+  mysqldb:
+    platform: linux/x86_64
+    image: mysql:5.7.38
+    restart: always
+    ports:
+      - "3307:3306"
+    volumes:
+      - ~/db/phonebooksystem:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    networks:
+      - phonebooksystem-net
+
+networks:
+  phonebooksystem-net:

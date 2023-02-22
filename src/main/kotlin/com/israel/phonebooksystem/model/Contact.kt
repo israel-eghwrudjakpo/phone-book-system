@@ -9,9 +9,9 @@ import javax.persistence.*
 @Entity
 @Table(name = "CONTACT")
 data class Contact (
-     val name : String,
-     val phone_number : String,
-     val address : String
+     val name : String? = null,
+     val phone_number : String? = null,
+     val address : String? = null
 
 ){
 
